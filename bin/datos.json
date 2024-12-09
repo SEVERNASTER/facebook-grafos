@@ -1,0 +1,741 @@
+{
+    "Usuarios": [
+        {
+            "nick": "Juan123",
+            "intereses": [
+                "Música",
+                "Tecnología"
+            ],
+            "sigue": [
+                "Maria456",
+                "Rodrigo789"
+            ],
+            "seguidores": [
+                "Luis101",
+                "Ana202"
+            ],
+            "amigos": [
+                {
+                    "nick": "Maria456",
+                    "distancia": 5
+                },
+                {
+                    "nick": "Luis101",
+                    "distancia": 3
+                }
+            ],
+            "grupos": [
+                "Developers",
+                "Música Lovers"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Maria456",
+                    "cantidad": 35
+                },
+                {
+                    "nick": "Rodrigo789",
+                    "cantidad": 50
+                }
+            ]
+        },
+        {
+            "nick": "Maria456",
+            "intereses": [
+                "Arte",
+                "Deportes"
+            ],
+            "sigue": [
+                "Juan123"
+            ],
+            "seguidores": [
+                "Juan123",
+                "Ana202"
+            ],
+            "amigos": [
+                {
+                    "nick": "Juan123",
+                    "distancia": 5
+                },
+                {
+                    "nick": "Rodrigo789",
+                    "distancia": 4
+                }
+            ],
+            "grupos": [
+                "Artistas Unidos",
+                "Deportistas"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Juan123",
+                    "cantidad": 40
+                }
+            ]
+        },
+        {
+            "nick": "Rodrigo789",
+            "intereses": [
+                "Cine",
+                "Viajes"
+            ],
+            "sigue": [
+                "Maria456"
+            ],
+            "seguidores": [
+                "Juan123"
+            ],
+            "amigos": [
+                {
+                    "nick": "Maria456",
+                    "distancia": 4
+                },
+                {
+                    "nick": "Luis101",
+                    "distancia": 2
+                }
+            ],
+            "grupos": [
+                "Viajeros",
+                "Cinéfilos"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Juan123",
+                    "cantidad": 45
+                },
+                {
+                    "nick": "Luis101",
+                    "cantidad": 50
+                }
+            ]
+        },
+        {
+            "nick": "Luis101",
+            "intereses": [
+                "Fotografía",
+                "Ciclismo"
+            ],
+            "sigue": [
+                "Juan123",
+                "Maria456"
+            ],
+            "seguidores": [],
+            "amigos": [
+                {
+                    "nick": "Juan123",
+                    "distancia": 3
+                },
+                {
+                    "nick": "Rodrigo789",
+                    "distancia": 2
+                }
+            ],
+            "grupos": [
+                "Fotógrafos",
+                "Ciclistas"
+            ],
+            "redireccionamientos": []
+        },
+        {
+            "nick": "Ana202",
+            "intereses": [
+                "Lectura",
+                "Danza"
+            ],
+            "sigue": [],
+            "seguidores": [
+                "Juan123"
+            ],
+            "amigos": [
+                {
+                    "nick": "Luis101",
+                    "distancia": 6
+                }
+            ],
+            "grupos": [
+                "Lectores",
+                "Bailarines"
+            ],
+            "redireccionamientos": []
+        },
+        {
+            "nick": "Carlos303",
+            "intereses": [
+                "Tecnología",
+                "Viajes"
+            ],
+            "sigue": [
+                "Juan123",
+                "Ana202"
+            ],
+            "seguidores": [
+                "Luis101"
+            ],
+            "amigos": [
+                {
+                    "nick": "Ana202",
+                    "distancia": 4
+                },
+                {
+                    "nick": "Lucas707",
+                    "distancia": 5
+                }
+            ],
+            "grupos": [
+                "Developers",
+                "Viajeros",
+                "Tech Explorers"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Lucas707",
+                    "cantidad": 38
+                }
+            ]
+        },
+        {
+            "nick": "Sofia404",
+            "intereses": [
+                "Arte",
+                "Fotografía"
+            ],
+            "sigue": [
+                "Carlos303"
+            ],
+            "seguidores": [
+                "Rodrigo789"
+            ],
+            "amigos": [
+                {
+                    "nick": "Luis101",
+                    "distancia": 2
+                }
+            ],
+            "grupos": [
+                "Artistas Unidos",
+                "Fotógrafos",
+                "Nature Lovers"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Maria456",
+                    "cantidad": 42
+                }
+            ]
+        },
+        {
+            "nick": "Pedro505",
+            "intereses": [
+                "Música",
+                "Deportes"
+            ],
+            "sigue": [
+                "Rodrigo789",
+                "Maria456"
+            ],
+            "seguidores": [
+                "Ana202"
+            ],
+            "amigos": [
+                {
+                    "nick": "Maria456",
+                    "distancia": 5
+                }
+            ],
+            "grupos": [
+                "Música Lovers",
+                "Deportistas",
+                "Outdoor Enthusiasts"
+            ],
+            "redireccionamientos": []
+        },
+        {
+            "nick": "Clara606",
+            "intereses": [
+                "Lectura",
+                "Danza"
+            ],
+            "sigue": [
+                "Carlos303",
+                "Juan123"
+            ],
+            "seguidores": [
+                "Sofia404"
+            ],
+            "amigos": [
+                {
+                    "nick": "Ana202",
+                    "distancia": 3
+                },
+                {
+                    "nick": "Luis101",
+                    "distancia": 2
+                }
+            ],
+            "grupos": [
+                "Lectores",
+                "Bailarines"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Lucas707",
+                    "cantidad": 48
+                }
+            ]
+        },
+        {
+            "nick": "Lucas707",
+            "intereses": [
+                "Viajes",
+                "Tecnología"
+            ],
+            "sigue": [
+                "Rodrigo789"
+            ],
+            "seguidores": [
+                "Carlos303"
+            ],
+            "amigos": [
+                {
+                    "nick": "Carlos303",
+                    "distancia": 5
+                }
+            ],
+            "grupos": [
+                "Viajeros",
+                "Developers",
+                "Tech Explorers"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Juan123",
+                    "cantidad": 52
+                }
+            ]
+        },
+        {
+            "nick": "Valeria808",
+            "intereses": [
+                "Arte",
+                "Música"
+            ],
+            "sigue": [
+                "Maria456"
+            ],
+            "seguidores": [
+                "Lucas707"
+            ],
+            "amigos": [
+                {
+                    "nick": "Pedro505",
+                    "distancia": 4
+                },
+                {
+                    "nick": "Sofia404",
+                    "distancia": 6
+                }
+            ],
+            "grupos": [
+                "Artistas Unidos",
+                "Música Lovers"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Sofia404",
+                    "cantidad": 50
+                }
+            ]
+        },
+        {
+            "nick": "Diego909",
+            "intereses": [
+                "Fotografía",
+                "Tecnología"
+            ],
+            "sigue": [
+                "Luis101",
+                "Lucas707"
+            ],
+            "seguidores": [
+                "Pedro505"
+            ],
+            "amigos": [
+                {
+                    "nick": "Lucas707",
+                    "distancia": 3
+                },
+                {
+                    "nick": "Clara606",
+                    "distancia": 2
+                }
+            ],
+            "grupos": [
+                "Fotógrafos",
+                "Developers",
+                "Tech Explorers"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Juan123",
+                    "cantidad": 60
+                }
+            ]
+        },
+        {
+            "nick": "Marta1010",
+            "intereses": [
+                "Cine",
+                "Lectura"
+            ],
+            "sigue": [
+                "Lucas707"
+            ],
+            "seguidores": [
+                "Valeria808"
+            ],
+            "amigos": [
+                {
+                    "nick": "Sofia404",
+                    "distancia": 2
+                },
+                {
+                    "nick": "Luis101",
+                    "distancia": 1
+                }
+            ],
+            "grupos": [
+                "Lectores",
+                "Cinéfilos",
+                "Movie Enthusiasts"
+            ],
+            "redireccionamientos": []
+        },
+        {
+            "nick": "Nico111",
+            "intereses": [
+                "Gaming",
+                "Programación"
+            ],
+            "sigue": [
+                "Juan123",
+                "Maria456"
+            ],
+            "seguidores": [
+                "Carlos303"
+            ],
+            "amigos": [
+                {
+                    "nick": "Lucas707",
+                    "distancia": 4
+                },
+                {
+                    "nick": "Sofia404",
+                    "distancia": 5
+                }
+            ],
+            "grupos": [
+                "Developers",
+                "Gamers"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Juan123",
+                    "cantidad": 30
+                }
+            ]
+        },
+        {
+            "nick": "Emilia222",
+            "intereses": [
+                "Arte",
+                "Yoga"
+            ],
+            "sigue": [
+                "Valeria808",
+                "Ana202"
+            ],
+            "seguidores": [
+                "Pedro505"
+            ],
+            "amigos": [
+                {
+                    "nick": "Valeria808",
+                    "distancia": 3
+                },
+                {
+                    "nick": "Marta1010",
+                    "distancia": 4
+                }
+            ],
+            "grupos": [
+                "Artistas Unidos",
+                "Wellness Enthusiasts"
+            ],
+            "redireccionamientos": []
+        },
+        {
+            "nick": "Lucas333",
+            "intereses": [
+                "Ciclismo",
+                "Cine"
+            ],
+            "sigue": [
+                "Luis101",
+                "Marta1010"
+            ],
+            "seguidores": [
+                "Diego909"
+            ],
+            "amigos": [
+                {
+                    "nick": "Luis101",
+                    "distancia": 1
+                },
+                {
+                    "nick": "Clara606",
+                    "distancia": 3
+                }
+            ],
+            "grupos": [
+                "Ciclistas",
+                "Cinéfilos"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Luis101",
+                    "cantidad": 20
+                }
+            ]
+        },
+        {
+            "nick": "Violeta444",
+            "intereses": [
+                "Música",
+                "Viajes"
+            ],
+            "sigue": [
+                "Rodrigo789",
+                "Valeria808"
+            ],
+            "seguidores": [
+                "Sofia404"
+            ],
+            "amigos": [
+                {
+                    "nick": "Pedro505",
+                    "distancia": 5
+                },
+                {
+                    "nick": "Rodrigo789",
+                    "distancia": 6
+                }
+            ],
+            "grupos": [
+                "Música Lovers",
+                "Travel Enthusiasts"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Maria456",
+                    "cantidad": 25
+                }
+            ]
+        },
+        {
+            "nick": "Gabriel555",
+            "intereses": [
+                "Tecnología",
+                "Deportes"
+            ],
+            "sigue": [
+                "Juan123",
+                "Carlos303"
+            ],
+            "seguidores": [
+                "Diego909",
+                "Nico111"
+            ],
+            "amigos": [
+                {
+                    "nick": "Carlos303",
+                    "distancia": 2
+                },
+                {
+                    "nick": "Luis101",
+                    "distancia": 3
+                }
+            ],
+            "grupos": [
+                "Developers",
+                "Deportistas"
+            ],
+            "redireccionamientos": []
+        },
+        {
+            "nick": "Elena666",
+            "intereses": [
+                "Fotografía",
+                "Cine"
+            ],
+            "sigue": [
+                "Rodrigo789",
+                "Marta1010"
+            ],
+            "seguidores": [
+                "Clara606"
+            ],
+            "amigos": [
+                {
+                    "nick": "Sofia404",
+                    "distancia": 4
+                },
+                {
+                    "nick": "Marta1010",
+                    "distancia": 5
+                }
+            ],
+            "grupos": [
+                "Fotógrafos",
+                "Movie Enthusiasts"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Marta1010",
+                    "cantidad": 18
+                }
+            ]
+        },
+        {
+            "nick": "Mateo777",
+            "intereses": [
+                "Yoga",
+                "Gaming"
+            ],
+            "sigue": [
+                "Emilia222",
+                "Violeta444"
+            ],
+            "seguidores": [
+                "Nico111"
+            ],
+            "amigos": [
+                {
+                    "nick": "Gabriel555",
+                    "distancia": 3
+                },
+                {
+                    "nick": "Lucas333",
+                    "distancia": 4
+                }
+            ],
+            "grupos": [
+                "Gamers",
+                "Wellness Enthusiasts"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Rodrigo789",
+                    "cantidad": 12
+                }
+            ]
+        },
+        {
+            "nick": "Lucia888",
+            "intereses": [
+                "Danza",
+                "Arte"
+            ],
+            "sigue": [
+                "Valeria808",
+                "Sofia404"
+            ],
+            "seguidores": [
+                "Emilia222"
+            ],
+            "amigos": [
+                {
+                    "nick": "Ana202",
+                    "distancia": 3
+                },
+                {
+                    "nick": "Elena666",
+                    "distancia": 4
+                }
+            ],
+            "grupos": [
+                "Bailarines",
+                "Artistas Unidos"
+            ],
+            "redireccionamientos": []
+        },
+        {
+            "nick": "Felipe999",
+            "intereses": [
+                "Programación",
+                "Viajes"
+            ],
+            "sigue": [
+                "Carlos303",
+                "Gabriel555"
+            ],
+            "seguidores": [
+                "Lucas333"
+            ],
+            "amigos": [
+                {
+                    "nick": "Gabriel555",
+                    "distancia": 2
+                },
+                {
+                    "nick": "Violeta444",
+                    "distancia": 6
+                }
+            ],
+            "grupos": [
+                "Developers",
+                "Travel Enthusiasts"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Carlos303",
+                    "cantidad": 22
+                }
+            ]
+        },
+        {
+            "nick": "Ariana1011",
+            "intereses": [
+                "Ciclismo",
+                "Lectura"
+            ],
+            "sigue": [
+                "Luis101",
+                "Marta1010"
+            ],
+            "seguidores": [
+                "Mateo777"
+            ],
+            "amigos": [
+                {
+                    "nick": "Lucas333",
+                    "distancia": 1
+                },
+                {
+                    "nick": "Lucia888",
+                    "distancia": 3
+                }
+            ],
+            "grupos": [
+                "Ciclistas",
+                "Lectores"
+            ],
+            "redireccionamientos": [
+                {
+                    "nick": "Luis101",
+                    "cantidad": 30
+                }
+            ]
+        }
+    ]
+}
