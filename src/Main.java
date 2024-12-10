@@ -9,14 +9,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         try {
-            // Leer el archivo JSON 
+            // Leer el archivo JSON
             BufferedReader br = new BufferedReader(new FileReader("src/datos.json"));
             StringBuilder jsonBuilder = new StringBuilder();
             String linea;
 
             while ((linea = br.readLine()) != null) {
                 jsonBuilder.append(linea);
-            }  
+            }
             br.close();
 
             // Convertir el texto a un objeto JSON
@@ -37,14 +37,14 @@ public class Main {
             ArrayList<String> nicks = new ArrayList<>();
             for (Usuario usuario : usuarios) {
                 nicks.add(usuario.getNick());
-            } 
+            }
 
             // Crear la instancia de App
             App app = new App(usuarios, nicks);
-            
+
             // Imprimir la cantidad total de usuarios
             System.out.println("\nCantidad total de usuarios: " + usuarios.size());
-            
+
             Scanner scanner = new Scanner(System.in);
             int opcion = -1;
 
@@ -54,28 +54,29 @@ public class Main {
                 System.out.println("2) Ver información de un usuario");
                 System.out.println("3) Lista influencers");
                 System.out.println("4) Buscar sugerencias");
-                System.out.println("5) Buscar clústeres");
+                System.out.println("5) Buscar amigos con intereses comunes");
                 System.out.println("6) Salir");
                 System.out.print("Elige una opción: ");
-    
+
                 // Validar entrada
-                if (scanner.hasNextInt()) {  // Verifica si hay un entero disponible
+                if (scanner.hasNextInt()) { // Verifica si hay un entero disponible
                     opcion = scanner.nextInt();
                     scanner.nextLine(); // Consumir la nueva línea
                 } else {
+
                     System.out.println("Por favor, introduce un número válido.");
                     scanner.nextLine(); // Consumir entrada inválida
                     continue; // Reintentar
                 }
-    
+
                 switch (opcion) {
                     case 1:
                         System.out.println("Lista de usuarios:");
                         for (String nick : nicks) {
                             System.out.println(" - " + nick);
-                        } 
+                        }
                         break;
-    
+
                     case 2:
                         System.out.print("Introduce el nick del usuario: ");
                         String nickUsuario = scanner.nextLine();
@@ -87,7 +88,7 @@ public class Main {
                             System.out.println("No existe un usuario con el nick: " + nickUsuario);
                         }
                         break;
-    
+
                     case 3:
                         System.out.println("Lista de influencers:");
                         ArrayList<Usuario> influencers = app.buscarInfluencers();
@@ -98,9 +99,9 @@ public class Main {
                             for (Usuario influencer : influencers) {
                                 System.out.println(" - " + influencer.getNick());
                             }
-                        }   
+                        }
                         break;
-    
+
                     case 4:
                         System.out.print("Introduce el nick del usuario: ");
                         String nickParaSugerencias = scanner.nextLine();
@@ -110,52 +111,71 @@ public class Main {
                             System.out.println(app.getSugerencias(nickParaSugerencias));
                         } else {
                             System.out.println("No existe un usuario con el nick: " + nickParaSugerencias);
-                        } 
-                        break; 
-    
+                        }
+                        break;
+
                     case 5:
-                        System.out.print("Introduce un porcentaje entre 1 y 100: ");
+                        System.out.println("\nElige la coincidencia de intereses:");
+                        System.out.println("1) Que coincidan en uno");
+                        System.out.println("2) Que coincidan en varios");
+                        System.out.println("3) Que coincidan en todos");
+                        System.out.print("Elige una opcion:");
                         if (scanner.hasNextInt()) {
-                            int porcentaje = scanner.nextInt();
+                            int coincidencia = scanner.nextInt();
+                            ArrayList<ArrayList<Usuario>> grupos = null;
                             scanner.nextLine();
-                            if (porcentaje >= 1 && porcentaje <= 100) {
-                                ArrayList<ArrayList<Usuario>> clusters = app.getClusters(porcentaje);
-                                System.out.println("Clústeres encontrados:");
-                                for (int i = 0; i < clusters.size(); i++) {
-                                    System.out.println("Clúster " + (i + 1) + ":");
-                                    for (Usuario u : clusters.get(i)) {
-                                        System.out.println(" - " + u.getNick());
-                                    }
-                                } 
-                            } else {
-                                System.out.println("Por favor, introduce un porcentaje válido entre 1 y 100.");
+                            switch (coincidencia) {
+                                case 1:
+                                    grupos = app.encontrarGruposInteresesComunes(1);
+                                    break;
+                                case 2:
+                                    grupos = app.encontrarGruposInteresesComunes(50);
+                                    break;
+                                case 3:
+                                    grupos = app.encontrarGruposInteresesComunes(100);
+                                    break;
+                                default:
+                                    System.out.println("Ingresa una de las opciones");
+                                    break;
                             }
+                            if(grupos != null){
+                                System.out.println("Grupos encontrados:");
+                                for (int i = 0; i < grupos.size(); i++) {
+                                    if (grupos.get(i).size() != 1) {
+                                        System.out.println("Grupo " + (i + 1) + ":");
+                                        for (Usuario u : grupos.get(i)) {
+                                            System.out.println(" - " + u.getNick());
+                                        }
+                                    }
+                                }
+                            }
+
                         } else {
                             System.out.println("Por favor, introduce un número válido.");
                             scanner.nextLine();
                         }
                         break;
-    
+
                     case 6:
                         System.out.println("Saliendo del programa...");
                         break;
-    
+
                     default:
                         System.out.println("Opción no válida. Inténtalo de nuevo.");
                 }
-            }while(opcion != 6);
-    
-            scanner.close(); 
-            
-        }catch(Exception e) {
+            } while (opcion != 6);
+
+            scanner.close();
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     // Método para mapear el JSON a una instancia de Usuario
     public static Usuario mapearUsuario(JSONObject jsonObject) {
         Usuario usuario = new Usuario(jsonObject.getString("nick"));
-        
-        
+
         // Mapear los intereses
         JSONArray interesesArray = jsonObject.getJSONArray("intereses");
         for (int i = 0; i < interesesArray.length(); i++) {

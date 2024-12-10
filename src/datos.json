@@ -4,6 +4,8 @@
             "nick": "Juan123",
             "intereses": [
                 "Música",
+                "Arte",
+                "Deportes",
                 "Tecnología"
             ],
             "sigue": [
@@ -163,6 +165,8 @@
             "nick": "Carlos303",
             "intereses": [
                 "Tecnología",
+                "Arte",
+                "Deportes",
                 "Viajes"
             ],
             "sigue": [
@@ -351,6 +355,8 @@
             "nick": "Diego909",
             "intereses": [
                 "Fotografía",
+                "Arte",
+                "Deportes",
                 "Tecnología"
             ],
             "sigue": [
@@ -512,6 +518,7 @@
             "nick": "Violeta444",
             "intereses": [
                 "Música",
+                "Yoga",
                 "Viajes"
             ],
             "sigue": [
@@ -610,6 +617,8 @@
             "nick": "Mateo777",
             "intereses": [
                 "Yoga",
+                "Deportes",
+                "Cine",
                 "Gaming"
             ],
             "sigue": [
@@ -644,6 +653,8 @@
             "nick": "Lucia888",
             "intereses": [
                 "Danza",
+                "Ciclismo",
+                "Lectura",
                 "Arte"
             ],
             "sigue": [
@@ -707,6 +718,7 @@
             "nick": "Ariana1011",
             "intereses": [
                 "Ciclismo",
+                "Deportes",
                 "Lectura"
             ],
             "sigue": [

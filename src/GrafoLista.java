@@ -224,7 +224,7 @@ public class GrafoLista{
         Arrays.fill(distancias, Integer.MAX_VALUE);
         distancias[getIndex(origen)] = 0;
         
-        PriorityQueue<Nodo> cola = new PriorityQueue(new NodoComparador());
+        PriorityQueue<Nodo> cola = new PriorityQueue<Nodo>(new NodoComparador());
         cola.add(new Nodo(0, origen)); 
         
         Nodo actual;
@@ -267,6 +267,6 @@ public class GrafoLista{
             }
         }
         
-        return new ArrayList(cola);
+        return new ArrayList<Nodo>(cola);
     }     
 }

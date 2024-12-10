@@ -61,10 +61,8 @@ public class App{
         return influencers;
     }
     public HashMap<String, ArrayList<String>> getSugerencias(String nick){
-        //amigos.mostrar();
-        HashMap<String, ArrayList<String>> sugerencias = new HashMap();
-        ArrayList<String> amistades = new ArrayList();
-        ArrayList<String> grupos = new ArrayList();
+        HashMap<String, ArrayList<String>> sugerencias = new HashMap<String, ArrayList<String>>();
+        ArrayList<String> amistades = new ArrayList<String>();
         
         ArrayList<Nodo> res = amigos.dijkstra(nick); // Usamos el Grafo de amigos
         
@@ -76,6 +74,8 @@ public class App{
         
         return sugerencias;
     } 
+
+    
     private ArrayList<String> obtenerGruposDeInteres(Usuario usuario, ArrayList<Usuario> listaUsuarios) {
         HashMap<String, Integer> contadorGrupos = new HashMap<>();
         ArrayList<String> gruposUsuario = usuario.getGrupos();
@@ -100,8 +100,9 @@ public class App{
 
         return gruposSugeridos;
     } 
-    public ArrayList<ArrayList<Usuario>> getClusters(int porcentaje){
-        ArrayList<ArrayList<Usuario>> clusters = new ArrayList<>();
+    
+    public ArrayList<ArrayList<Usuario>> encontrarGruposInteresesComunes(int porcentaje){
+        ArrayList<ArrayList<Usuario>> grupos = new ArrayList<>();
         ArrayList<Usuario> visitados = new ArrayList<>();
     
         for(Usuario usuario : usuarios) {
@@ -109,8 +110,8 @@ public class App{
                 continue; // Si el usuario ya está en un clúster, saltarlo
             }
     
-            ArrayList<Usuario> cluster = new ArrayList<>();
-            cluster.add(usuario);
+            ArrayList<Usuario> grupo = new ArrayList<>();
+            grupo.add(usuario);
             visitados.add(usuario);
     
             for(Usuario otroUsuario : usuarios) {
@@ -123,15 +124,17 @@ public class App{
                 int totalIntereses = Math.min(usuario.getIntereses().size(), otroUsuario.getIntereses().size());
     
                 if(totalIntereses > 0 && (interesesCompartidos * 100 / totalIntereses) >= porcentaje) {
-                    cluster.add(otroUsuario);
+                    grupo.add(otroUsuario);
                     visitados.add(otroUsuario);
                 }
             }
     
-            clusters.add(cluster);
+            grupos.add(grupo);
         }
-        return clusters;
+        return grupos;
     }
+
+
     private int calcularInteresesCompartidos(Usuario u1, Usuario u2) {
         int contador = 0;
         for (String interes : u1.getIntereses()) {
